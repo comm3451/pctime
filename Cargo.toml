@@ -1,0 +1,16 @@
+[package]
+name = "pctime"
+version = "1.0.0"
+edition = "2024"
+description = "Windows power history, reconstructed from existing system event logs"
+license = "MIT"
+authors = ["comm3451"]
+repository = "https://github.com/comm3451/pctime"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
